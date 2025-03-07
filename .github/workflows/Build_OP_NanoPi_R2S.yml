@@ -24,6 +24,7 @@ jobs:
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
+        set +e
         docker rmi `docker images -q`
         echo "Deleting files, please wait ..."
         sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc /etc/mysql /etc/php
